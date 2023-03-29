@@ -8,7 +8,7 @@ import {
 import {ToastContainer,toast} from 'react-toastify';
 
 //Routes
-import Dashboard, { dashBoardLoader } from "./pages/Dashboard";
+import Dashboard, { dashboardAction, dashBoardLoader } from "./pages/Dashboard";
 import Error from "./pages/Error";
 import Main,{mainLoader} from "./pages/Layout/Main";
 import { logoutAction } from "./actions/logout";
@@ -24,6 +24,7 @@ const router = createBrowserRouter([
         path: "/",
         element: <Dashboard/>,
         loader: dashBoardLoader,
+        action: dashboardAction,
         errorElement:<Error/>    
       },
       {
